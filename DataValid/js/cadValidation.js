@@ -1,7 +1,7 @@
 //Do this as soon as the DOM is ready
 $(document).ready(function() {
 
-    $.getJSON("http://demos.fmeserver.com.s3.amazonaws.com/server-demo-config.json", function(config) {
+    $.getJSON("https://demos.fmeserver.com.s3.amazonaws.com/server-demo-config.json", function(config) {
         $('#loadingImage').hide();
         initialize(config.initObject);
     });
