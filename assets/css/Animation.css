@@ -1,0 +1,321 @@
+﻿
+/*Cloud*/
+body {
+    overflow-x: hidden;
+}
+
+#background-wrap {
+    bottom: 95px;
+    left: 0;
+    /*padding-top: 80px;*/
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+    /* background: url(../Animation/home-banner.png) no-repeat center center; */
+    background-image: url(../img/Riyadh-banner.png);
+    background-repeat-y: no-repeat;
+    background-repeat-x: repeat;
+    background-size: 533px;
+    background-position-y: bottom;
+}
+
+/* KEYFRAMES */
+
+@-webkit-keyframes animateCloud {
+    0% {
+        margin-left: 30%;
+    }
+
+    100% {
+        margin-left: 100%;
+    }
+}
+
+@-moz-keyframes animateCloud {
+    0% {
+        margin-left: 30%;
+    }
+
+    100% {
+        margin-left: 100%;
+    }
+}
+
+@keyframes animateCloud {
+    0% {
+        margin-left: 30%;
+    }
+
+    100% {
+        margin-left: 100%;
+    }
+}
+
+
+@-webkit-keyframes animateCloud50 {
+    0% {
+        margin-left: 50%;
+    }
+
+    100% {
+        margin-left: 100%;
+    }
+}
+
+@-moz-keyframes animateCloud50 {
+    0% {
+        margin-left: 50%;
+    }
+
+    100% {
+        margin-left: 100%;
+    }
+}
+
+@keyframes animateCloud50 {
+    0% {
+        margin-left: 50%;
+    }
+
+    100% {
+        margin-left: 100%;
+    }
+}
+
+
+@-webkit-keyframes animateShip {
+    0% {
+        margin-left: 65%;
+    }
+
+    100% {
+        margin-left: 100%;
+    }
+}
+
+@-moz-keyframes animateShip {
+    0% {
+        margin-left: 65%;
+    }
+
+    100% {
+        margin-left: 100%;
+    }
+}
+
+@keyframes animateShip {
+    0% {
+        margin-left: 65%;
+    }
+
+    100% {
+        margin-left: 100%;
+    }
+}
+
+
+
+@-webkit-keyframes animateShip2 {
+    0% {
+        margin-left: 100%;
+    }
+
+    100% {
+        margin-left: 30px;
+    }
+}
+
+@-moz-keyframes animateShip2 {
+    0% {
+        margin-left: 100%;
+    }
+
+    100% {
+        margin-left: 30px;
+    }
+}
+
+@keyframes animateShip2 {
+    0% {
+        margin-left: 50%;
+    }
+
+    100% {
+        margin-left: 30px;
+    }
+}
+/* ANIMATIONS */
+
+.x1 {
+    -webkit-animation: animateCloud 55s linear infinite;
+    -moz-animation: animateCloud 55s linear infinite;
+    animation: animateCloud 55s linear infinite;
+    -webkit-transform: scale(0.65);
+    -moz-transform: scale(0.65);
+    transform: scale(0.65);
+}
+
+.x2 {
+    -webkit-animation: animateCloud50 35s linear infinite;
+    -moz-animation: animateCloud50 35s linear infinite;
+    animation: animateCloud50 35s linear infinite;
+    -webkit-transform: scale(0.4);
+    -moz-transform: scale(0.4);
+    transform: scale(0.4);
+}
+
+.x3 {
+    -webkit-animation: animateCloud 40s linear infinite;
+    -moz-animation: animateCloud 40s linear infinite;
+    animation: animateCloud 40s linear infinite;
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    transform: scale(0.5);
+}
+
+.x4 {
+    -webkit-animation: animateCloud50 30s linear infinite;
+    -moz-animation: animateCloud50 30s linear infinite;
+    animation: animateCloud50 30s linear infinite;
+    -webkit-transform: scale(0.4);
+    -moz-transform: scale(0.4);
+    transform: scale(0.4);
+}
+
+.xPlane {
+    -webkit-animation: animateCloud50 10s linear infinite;
+    -moz-animation: animateCloud50 10s linear infinite;
+    animation: animateCloud50 10s linear infinite;
+}
+
+.xShip1 {
+    -webkit-animation: animateShip 35s linear infinite;
+    -moz-animation: animateShip 35s linear infinite;
+    animation: animateShip 35s linear infinite;
+    position: absolute;
+    margin-top: 550px;
+    position: fixed;
+    bottom: 70px;
+}
+
+.xShip2 {
+    -webkit-animation: animateShip2 25s linear infinite;
+    -moz-animation: animateShip2 25s linear infinite;
+    animation: animateShip2 25s linear infinite;
+    position: absolute;
+    margin-top: 560px;
+}
+
+.animationSea {
+    background-image: url(../Animation/banner-water.gif);
+    background-position-x: right;
+    height: 126px;
+    width: 100%;
+    position: fixed;
+    /* margin-top: 541px; */
+    bottom: 0;
+    z-index: -1;
+}
+
+/* OBJECTS */
+
+.cloud1 {
+    background-image: url('../Animation/cloud_1_header.svg');
+    height: 35px;
+    position: relative;
+    width: 170px;
+}
+
+.cloud2 {
+    background-image: url('../Animation/cloud_2_header.svg');
+    height: 35px;
+    position: relative;
+    width: 170px;
+}
+
+.cloud3 {
+    background-image: url('../Animation/cloud_3_header.svg');
+    height: 35px;
+    position: relative;
+    width: 170px;
+}
+
+.cloud4 {
+    background-image: url('../Animation/cloud_4_header.svg');
+    height: 35px;
+    position: relative;
+    width: 150px;
+}
+
+.Plane1 {
+    background-image: url('../Animation/banner-airplane_1.svg');
+    height: 50px;
+    position: relative;
+    width: 130px;
+}
+
+.Ship1 {
+    background-image: url('../Animation/boat.svg');
+    height: 50px;
+    position: relative;
+    width: 73px;
+}
+
+.Ship2 {
+    background-image: url(../Animation/Yacht.png);
+    height: 67px;
+    position: relative;
+    width: 116px;
+    background-size: contain;
+}
+
+
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-20px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+
+.Ballon-HotAir {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    transform: translatey(0px);
+    animation: float 6s ease-in-out infinite;
+    background-image: url(../Animation/hotair_ballon.png);
+    background-size: 70%;
+    background-repeat: no-repeat;
+    position: fixed;
+    right: 5px;
+    bottom: 370px;
+}
+
+
+.Ballon-HotAir2 {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    transform: translatey(0px);
+    animation: float 6s ease-in-out infinite;
+    background-image: url(../Animation/hotair_ballon2.png);
+    background-size: 28%;
+    background-repeat: no-repeat;
+    position: fixed;
+    right: 168px;
+    bottom: 180px;
+}
+
+
+
+/*End Cloud*/
