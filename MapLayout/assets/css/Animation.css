@@ -14,8 +14,8 @@ body {
     z-index: 0;
     /* background: url(../Animation/home-banner.png) no-repeat center center; */
     background-image: url(../img/Riyadh-banner.png);
-    background-repeat-y: no-repeat;
-    background-repeat-x: repeat;
+    background-repeat: no-repeat;
+    background-repeat: repeat-x;
     background-size: 533px;
     background-position-y: bottom;
 }
