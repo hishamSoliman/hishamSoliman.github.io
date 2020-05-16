@@ -25,6 +25,7 @@
     <link href="assets/css/bootstrap-tagsinput.css" rel="stylesheet" />
     <link href="assets/css/Animation.css" rel="stylesheet" />
     <link href="assets/css/langBar.css" rel="stylesheet" />
+    <link href="assets/css/cycle2.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -149,44 +150,57 @@
                     <h3 class="panel-title">Suggestion Places</h3>
                     <!--<p class="subtitle">For complete list</p>-->
                 </div>
-                <div class="wrap">
-                    <div class="card">
-                        <div class="img-loc-card">
-                            <img src="assets/img/jizan lagb vally.jpg" />
+                <div class="wrap slideshow"
+                     data-cycle-fx="carousel"
+                     data-cycle-timeout="3000"
+                     data-cycle-slides="> div.CardWrap"
+                     carousel-offset="30"
+                     data-cycle-carousel-visible="3"
+                     data-cycle-carousel-vertical="true">
+                    <div class="CardWrap">
+                        <div class="card">
+                            <div class="img-loc-card">
+                                <img src="assets/img/jizan lagb vally.jpg" />
+                            </div>
+                            <div class="card-content">
+                                <b>Jizan Lagb Valley</b>
+                                <p>More info about it.</p>
+                                <p><a href="#0">More Info</a></p>
+                            </div>
+                            <span><i class="love fa fa-heart-o" aria-hidden="true"></i> </span>
                         </div>
-                        <div class="card-content">
-                            <b>Jizan Lagb Valley</b>
-                            <p>More info about it.</p>
-                            <p><a href="#0">More Info</a></p>
-                        </div>
-                        <span><i class="love fa fa-heart-o" aria-hidden="true"></i> </span>
                     </div>
-                    <div class="card">
-                        <div class="img-loc-card">
-                            <img src="assets/img/623388.jpg" />
-                        </div>
-                        <div class="card-content">
-                            <b>Rejal Almaa</b>
-                            <p>More info about it.</p>
-                            <p><a href="#0">More Info</a></p>
-                        </div>
-                        <span><i class="love fa fa-heart" aria-hidden="true"></i> </span>
+                    <div class="CardWrap">
+                        <div class="card">
+                            <div class="img-loc-card">
+                                <img src="assets/img/623388.jpg" />
+                            </div>
+                            <div class="card-content">
+                                <b>Rejal Almaa</b>
+                                <p>More info about it.</p>
+                                <p><a href="#0">More Info</a></p>
+                            </div>
+                            <span><i class="love fa fa-heart" aria-hidden="true"></i> </span>
 
+                        </div>
+                        </div>
+                    <div class="CardWrap"> 
+                        <div class="card">
+                            <div class="img-loc-card">
+                                <img src="assets/img/57018805b8e63.jpg" />
+                            </div>
+                            <div class="card-content">
+                                <b>Al Dawaser</b>
+                                <p>More info about it.</p>
+                                <p><a href="#0">More Info</a></p>
+                            </div>
+                            <span><i class="love fa fa-heart-o" aria-hidden="true"></i> </span>
+
+                        </div>
                     </div>
-                    <div class="card">
-                        <div class="img-loc-card">
-                            <img src="assets/img/57018805b8e63.jpg" />
-                        </div>
-                        <div class="card-content">
-                            <b>Al Dawaser</b>
-                            <p>More info about it.</p>
-                            <p><a href="#0">More Info</a></p>
-                        </div>
-                        <span><i class="love fa fa-heart-o" aria-hidden="true"></i> </span>
 
                     </div>
                 </div>
-            </div>
 
 
         </div>
@@ -206,7 +220,7 @@
 
 
             <div id="background-wrap">
-                
+
                 <div class="x1">
                     <div class="cloud1"></div>
                 </div>
@@ -261,6 +275,8 @@
     <script src="assets/scripts/bootstrap-tagsinput.js"></script>
     <script ript src="https://kit.fontawesome.com/05ce0b1bc8.js" crossorigin="anonymous"></script>
     <script src="assets/scripts/LangBar.js"></script>
+    <script src="assets/scripts/jquery.cycle2.js"></script>
+    <script src="assets/scripts/jquery.cycle2.carousel.js"></script>
     <script>
         $('#RegionsInput').tagsinput({
             typeahead: {
@@ -287,8 +303,8 @@
             });
         });
 
+        $('.slideshow').cycle();
 
-        
     </script>
 </body>
 
