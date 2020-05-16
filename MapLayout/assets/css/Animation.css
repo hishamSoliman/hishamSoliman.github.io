@@ -122,7 +122,7 @@ body {
     }
 
     100% {
-        margin-left: 30px;
+        margin-left: 50%;
     }
 }
 
@@ -132,17 +132,17 @@ body {
     }
 
     100% {
-        margin-left: 30px;
+        margin-left: 50%;
     }
 }
 
 @keyframes animateShip2 {
     0% {
-        margin-left: 50%;
+        margin-left: 100%;
     }
 
     100% {
-        margin-left: 30px;
+        margin-left: 50%;
     }
 }
 /* ANIMATIONS */
@@ -200,11 +200,11 @@ body {
 }
 
 .xShip2 {
-    -webkit-animation: animateShip2 25s linear infinite;
-    -moz-animation: animateShip2 25s linear infinite;
-    animation: animateShip2 25s linear infinite;
+    -webkit-animation: animateShip2 35s linear infinite;
+    -moz-animation: animateShip2 35s linear infinite;
+    animation: animateShip2 35s linear infinite;
     position: absolute;
-    margin-top: 560px;
+    bottom: 205px;
 }
 
 .animationSea {
@@ -263,10 +263,11 @@ body {
 }
 
 .Ship2 {
-    background-image: url(../Animation/Yacht.png);
+    background-image: url('../Animation/plan2.png');
+    /*background-image: url(../Animation/Yacht.png);*/
     height: 67px;
     position: relative;
-    width: 116px;
+    width: 88px;
     background-size: contain;
 }
 
@@ -298,7 +299,7 @@ body {
     background-repeat: no-repeat;
     position: fixed;
     right: 5px;
-    bottom: 370px;
+    bottom: 507px;
 }
 
 
@@ -313,7 +314,7 @@ body {
     background-repeat: no-repeat;
     position: fixed;
     right: 168px;
-    bottom: 180px;
+    bottom: 339px;
 }
 
 
