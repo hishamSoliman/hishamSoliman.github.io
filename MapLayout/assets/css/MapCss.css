@@ -225,7 +225,7 @@ label:focus + input::placeholder {
 
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
 
     .navbar-default .brand {
         display: block;
@@ -302,11 +302,20 @@ label:focus + input::placeholder {
         display: none;
     }
 
+    .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+        display: none;
+    }
+
+    .navbar-nav {
+        width: auto !important;
+        float: right;
+    }
+
 
 }
 
 /* Medium devices (landscape tablets, 768px and down) */
-@media only screen and (max-width: 768px) {
+/*@media only screen and (max-width: 768px) {
     .navbar-default .navbar-collapse, .navbar-default .navbar-form {
         display: none;
     }
@@ -314,12 +323,16 @@ label:focus + input::placeholder {
     .navbar-nav {
         width: auto !important;
     }
-}
+}*/
 
 @media only screen and (max-width: 1120px) {
     .mapviewer {
         width: calc(100% - 30px);
         left: 15px;
+    }
+
+    #background-wrap {
+        display: none !important;
     }
 
     .forcast-weatherwidget {
@@ -328,16 +341,3 @@ label:focus + input::placeholder {
     }
 }
 
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-}
-    
-
-    /* Large devices (laptops/desktops, 992px and up) */
-    @media only screen and (min-width: 992px) {
-    }
-
-    /* Extra large devices (large laptops and desktops, 1200px and up) */
-    @media only screen and (min-width: 1200px) {
-    }
