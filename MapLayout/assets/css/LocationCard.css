@@ -85,6 +85,16 @@
     cursor: pointer;
 }
 
+.fa-bookmark {
+    color: #0583ba;
+    cursor: pointer;
+}
+
+.fa-bookmark-o {
+    color: #0583ba;
+    cursor: pointer;
+}
+
 .fa-heart {
     color: #f26e6e;
     cursor: pointer;

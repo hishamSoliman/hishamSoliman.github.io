@@ -203,7 +203,7 @@ body {
     -webkit-animation: animateShip2 35s linear infinite;
     -moz-animation: animateShip2 35s linear infinite;
     animation: animateShip2 35s linear infinite;
-    position: absolute;
+    position: fixed;
     bottom: 205px;
 }
 

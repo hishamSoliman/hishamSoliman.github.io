@@ -1,13 +1,12 @@
 ﻿/*Map Layout*/
 .mapviewer {
     position: fixed;
-    /*width: calc(100% - 160px);
-    height: calc(100vh - 160px);*/
     width: calc(100% - 700px);
     height: calc(100vh - 123px);
-    /*background-color: #fff0f9;*/
-    /*margin: 80px;*/
+    /* background-color: #fff0f9; */
+    /* margin: 80px; */
     z-index: 1;
+    right: 350px;
 }
 
     .mapviewer iframe {
@@ -17,20 +16,31 @@
         width: 100% !important;
         height: 100% !important;
         border-radius: 10px 10px 0 0;
-
-        opacity:1;
+        opacity: 1;
     }
 
-.container-fluid {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    background-color: transparent;
+.Map-Fit {
+    width: calc(100% - 365px) !important;
+    left: 15px !important;
+    /*-moz-transition: width 1s ease-in-out, right 1.5s ease-in-out;
+    -webkit-transition: width 1s ease-in-out, right 1.5s ease-in-out;
+    -moz-transition: width 1s ease-in-out, right 1.5s ease-in-out;
+    -o-transition: width 1s ease-in-out, right 1.5s ease-in-out;
+    transition: width 1s ease-in-out, right 1.5s ease-in-out;*/
 }
 
+    .container-fluid {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+        background-color: transparent;
+        /*height:80px;*/
+    }
+
 footer {
-    position: absolute;
+    /*position: absolute;*/
+    position: fixed;
     bottom: 0;
     right: 0;
     padding-top: 15px;
@@ -38,7 +48,7 @@ footer {
     width: 100%;
     z-index: 1;
     background-color: #f5f5fa;
-    opacity:1;
+    opacity: 1;
 }
 
 #wrapper .sidebar {
@@ -58,6 +68,7 @@ footer {
 .layout-fullwidth #wrapper .sidebar {
     left: -350px;
 }
+
 #wrapper .main {
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -75,7 +86,7 @@ footer {
 
 .navbar-default .brand {
     float: left;
-    padding: 0 0 0 25px !important;
+    padding: 0 55px 0 25px !important;
     background-color: transparent;
 }
 
@@ -96,6 +107,7 @@ footer {
     margin: 0;
     border: none;
     background-color: transparent;
+    /*height:80px;*/
 }
 
 .profile-header {
@@ -103,9 +115,9 @@ footer {
 }
 
     .profile-header .overlay {
-         background-color: transparent !important; 
-
+        background-color: transparent !important;
     }
+
     .profile-header .profile-main {
         border-radius: 10px 10px 0 0;
     }
@@ -119,14 +131,13 @@ footer {
     }
 
         .profile-header .profile-stat .stat-item:after {
-            
             background-color: #dedede;
         }
 
 .profile-more {
     position: absolute;
     z-index: 1;
-    left: 0;
+    left: 15px;
 }
 
 .sidebar .nav > li > a:focus, .sidebar .nav > li > a.active {
@@ -135,10 +146,10 @@ footer {
 }
 
 .slimScrollDiv .panel-heading {
-    padding: 20px 20px 0 20px;
+    padding: 20px 20px 6px 20px;
 }
 
-.panel-title  {
+.panel-title {
     font-weight: 600;
 }
 
@@ -173,8 +184,8 @@ label:focus + input::placeholder {
     left: 10px;
     height: 300px;
     width: 350px;*/
-    position: fixed;
-    width: calc(100% - 700px);
+    position: relative;
+    width: 100%;
 }
 
 
@@ -202,3 +213,131 @@ label:focus + input::placeholder {
     border: 1px solid #009696 !important;
 }
 */
+
+.LeftPanelBTN {
+    position: absolute;
+    z-index: 1;
+    right: -40px;
+    background: #f5f5fa;
+    top: calc(50% - 65px);
+    border-radius: 0 5px 5px 0;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    .navbar-default .brand {
+        display: block;
+        width: 150px;
+        padding: 0 !important;
+        padding-top: 5px !important;
+    }
+
+    .container-fluid {
+        background-color: #f5f5fa;
+        /*height:60px;*/
+    }
+
+    #background-wrap {
+        display: none !important;
+    }
+
+    .mapviewer iframe {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: calc(100% - 43px) !important;
+        border-radius: 0;
+        opacity: 1;
+        padding-top: 60px;
+    }
+
+    #wrapper #sidebar-nav, #wrapper .main {
+        padding-top: 70px;
+    }
+
+    #wrapper .sidebar {
+        width: calc(100% - 40px) !important;
+    }
+
+    .LeftPanelBTN {
+        border-radius: 0 10px 10px 0;
+        box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.1), 3px 0px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .layout-fullwidth #wrapper .sidebar {
+        left: calc(-100% + 40px)
+    }
+
+    .navbar-default{
+        /*height:60px;*/
+    }
+    .navbar-nav > li {
+        display: inline-table;
+    }
+
+        .navbar-nav > li > a span:not(.badge), .navbar-nav > li > a .icon-submenu {
+            display: block;
+        }
+
+
+    .navbar-nav .icon-menu {
+        padding-right: 10px !important;
+        padding-left: 10px !important;
+    }
+    .language-dropdown ul.lang-list {
+        position: absolute !important;
+    }
+
+    .profile-header .profile-stat .stat-item:after {
+        background-color: #dedede !important;
+    }
+
+    .navbar-nav .open .dropdown-menu{
+        margin-top:0 !important;
+    }
+    .forcast-weatherwidget {
+        display: none;
+    }
+
+
+}
+
+/* Medium devices (landscape tablets, 768px and down) */
+@media only screen and (max-width: 768px) {
+    .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+        display: none;
+    }
+
+    .navbar-nav {
+        width: auto !important;
+    }
+}
+
+@media only screen and (max-width: 1120px) {
+    .mapviewer {
+        width: calc(100% - 30px);
+        left: 15px;
+    }
+
+    .forcast-weatherwidget {
+        width: calc(100% - 365px);
+        display:none;
+    }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+    
+
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+    }
+
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {
+    }
