@@ -137,7 +137,7 @@ footer {
 .profile-more {
     position: absolute;
     z-index: 1;
-    left: 15px;
+    /*left: 15px;*/
 }
 
 .sidebar .nav > li > a:focus, .sidebar .nav > li > a.active {
@@ -147,6 +147,7 @@ footer {
 
 .slimScrollDiv .panel-heading {
     padding: 20px 20px 6px 20px;
+    text-align:left;
 }
 
 .panel-title {
