@@ -1,4 +1,9 @@
 ﻿/*Map Layout*/
+
+body {
+    background: linear-gradient(270deg, rgb(214, 241, 255) 0%, rgb(235, 244, 250) 47%, rgba(243,245,248,1) 85%) !important;
+}
+
 .mapviewer {
     position: fixed;
     width: calc(100% - 700px);
@@ -29,14 +34,14 @@
     transition: width 1s ease-in-out, right 1.5s ease-in-out;*/
 }
 
-    .container-fluid {
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
-        background-color: transparent;
-        /*height:80px;*/
-    }
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: transparent;
+    /*height:80px;*/
+}
 
 footer {
     /*position: absolute;*/
@@ -79,8 +84,8 @@ footer {
     left: 0;
     position: relative;
     float: right;
-    background-color: #f5f5fa;
-    min-height: 100vh;
+    background-color: transparent;
+    min-height: 100vh !important;
 }
 
 
@@ -147,7 +152,7 @@ footer {
 
 .slimScrollDiv .panel-heading {
     padding: 20px 20px 6px 20px;
-    text-align:left;
+    text-align: left;
 }
 
 .panel-title {
@@ -222,6 +227,9 @@ label:focus + input::placeholder {
     background: #f5f5fa;
     top: calc(50% - 65px);
     border-radius: 0 5px 5px 0;
+    -webkit-box-shadow: 2px 2px 5px -2px rgba(115,115,115,0.71);
+    -moz-box-shadow: 2px 2px 5px -2px rgba(115,115,115,0.71);
+    box-shadow: 2px 2px 5px -2px rgba(115,115,115,0.71);
 }
 
 
@@ -237,7 +245,7 @@ label:focus + input::placeholder {
 
     .container-fluid {
         background-color: #f5f5fa;
-        /*height:60px;*/
+        height: 60px;
     }
 
     #background-wrap {
@@ -265,16 +273,16 @@ label:focus + input::placeholder {
 
     .LeftPanelBTN {
         border-radius: 0 10px 10px 0;
-        box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.1), 3px 0px 3px rgba(0, 0, 0, 0.1);
     }
 
     .layout-fullwidth #wrapper .sidebar {
         left: calc(-100% + 40px)
     }
 
-    .navbar-default{
+    .navbar-default {
         /*height:60px;*/
     }
+
     .navbar-nav > li {
         display: inline-table;
     }
@@ -288,6 +296,7 @@ label:focus + input::placeholder {
         padding-right: 10px !important;
         padding-left: 10px !important;
     }
+
     .language-dropdown ul.lang-list {
         position: absolute !important;
     }
@@ -296,9 +305,10 @@ label:focus + input::placeholder {
         background-color: #dedede !important;
     }
 
-    .navbar-nav .open .dropdown-menu{
-        margin-top:0 !important;
+    .navbar-nav .open .dropdown-menu {
+        margin-top: 0 !important;
     }
+
     .forcast-weatherwidget {
         display: none;
     }
@@ -312,7 +322,15 @@ label:focus + input::placeholder {
         float: right;
     }
 
+    .sidebar-right {
+        width: calc(100% - 40px) !important;
+        right: calc(-100% + 40px) !important;
+        margin-top: 60px !important;
+    }
 
+    .rightPanelBTN {
+        top: 0 !important;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and down) */
@@ -338,7 +356,214 @@ label:focus + input::placeholder {
 
     .forcast-weatherwidget {
         width: calc(100% - 365px);
-        display:none;
+        display: none;
     }
 }
 
+
+/*Right Sidebar*/
+.sidebar-right {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    width: 350px;
+    height: 100%;
+    float: right;
+    background-color: #f5f5fa;
+    position: fixed;
+    right: -350px;
+    margin-top: 80px;
+    z-index: 1;
+}
+
+.sidebar-right-open {
+    right: 0 !important;
+    z-index: 1;
+    webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.rightPanelBTN {
+    position: absolute;
+    z-index: 1;
+    left: -40px;
+    background: #f5f5fa;
+    top: calc(50% - 145px);
+    border-radius: 5px 0 0 5px;
+    -webkit-box-shadow: -2px 0px 5px -2px rgba(115,115,115,0.71);
+    -moz-box-shadow: -2px 0px 5px -2px rgba(115,115,115,0.71);
+    box-shadow: -2px 0px 5px -2px rgba(115,115,115,0.71);
+}
+/*End Right Sidebar*/
+
+.landmark {
+    text-align: center;
+}
+
+    .landmark > ul {
+        list-style: none;
+    }
+
+        .landmark > ul li {
+            display: inline-block;
+            background-color: #b1b1b1;
+            margin: 5px;
+            border-radius: 50%;
+        }
+
+            .landmark > ul li a {
+                color: white;
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+                text-decoration: none;
+                height: 50px;
+                width: 50px;
+            }
+
+                .landmark > ul li a i {
+                    font-size: 22px;
+                }
+
+{
+    font-size: 22px;
+}
+
+.landmark > ul li.Landmark-on {
+    background-color: #3fab1b;
+}
+
+.landmark > .panel-heading {
+    padding-left: 0 !important;
+}
+
+/*.landmark > ul li a:hover, .landmark > ul li a:active {
+                color: lightsalmon;
+                text-decoration: none;
+            }*/
+
+
+.Transport {
+    text-align: center;
+}
+
+    .Transport > ul {
+        list-style: none;
+    }
+
+        .Transport > ul li {
+            display: inline-block;
+            background-color: transparent;
+            margin: 5px;
+            border-radius: 50%;
+            border: 1px solid rgb(146, 144, 144);
+        }
+
+            .Transport > ul li a {
+                color: white;
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+                text-decoration: none;
+                height: 48px;
+                width: 48px;
+            }
+
+            .Transport > ul li:hover {
+                background-color: #04abea;
+                border: 1px solid #fff;
+            }
+
+                .Transport > ul li:hover .fas {
+                    color: #fff !important;
+                }
+
+            .Transport > ul li a i {
+                font-size: 22px;
+                color: rgb(146, 144, 144);
+            }
+
+{
+    font-size: 22px;
+}
+
+.Transport > ul li.Landmark-on {
+    background-color: #3fab1b;
+}
+
+.Transport > .panel-heading {
+    padding-left: 0 !important;
+}
+
+
+
+.SelectRegions > .panel-heading {
+    padding-left: 0 !important;
+}
+
+.SelectRegions > ul {
+    list-style-type: none;
+}
+
+    .SelectRegions > ul li {
+        display: inline-block;
+    }
+
+input[type="checkbox"][id^="myRegions"] {
+    display: none;
+}
+
+ label {
+    border: 1px solid #b1b1b1;
+    padding: 10px;
+    display: block;
+    position: relative;
+    /*margin: 10px;*/
+    cursor: pointer;
+}
+
+label:before {
+    background-color: white;
+    color: white;
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    border: 1px solid #3fab1b;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 28px;
+    transition-duration: 0.4s;
+    transform: scale(0);
+}
+
+label img {
+    height: 60px;
+    width: 75px;
+    transition-duration: 0.2s;
+    transform-origin: 50% 50%;
+}
+
+:checked + label {
+    border-color: #3fab1b;
+}
+
+    :checked + label:before {
+        content: "✓";
+        background-color: #3fab1b;
+        transform: scale(1);
+    }
+
+    :checked + label img {
+        transform: scale(0.9);
+        /* box-shadow: 0 0 5px #333; */
+        z-index: -1;
+    }
