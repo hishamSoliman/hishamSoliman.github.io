@@ -31,7 +31,23 @@ $(document).ready(function() {
                 $('.mapviewer').removeClass('Map-Fit');
             }
         }
-	});
+    });
+
+    $('.btn-toggle-search').on('click', function () {
+
+        $(this).find('.lnr').toggleClass('lnr-magnifier lnr-arrow-right-circle');
+
+        $('#sidebar-nav-right').toggleClass('sidebar-right-open');
+
+        
+    });
+
+    $('.landmark > ul li').on('click', function () {
+
+        $(this).toggleClass('Landmark-on');
+
+
+    });
 
 	$(window).on('load', function() {
 		if($(window).innerWidth() < 1025) {
@@ -97,8 +113,8 @@ $(document).ready(function() {
 	if( $('.sidebar-scroll').length > 0 ) {
 		$('.sidebar-scroll').slimScroll({
 			height: '95%',
-            wheelStep: 2,
-            touchScrollStep: 100
+            wheelStep: 10,
+            touchScrollStep: 75
 		});
 	}
 
@@ -152,14 +168,16 @@ $(document).ready(function() {
 	if( $('.panel-scrolling').length > 0) {
 		$('.panel-scrolling .panel-body').slimScroll({
 			height: '430px',
-			wheelStep: 2,
+            wheelStep: 10,
+            touchScrollStep: 75
 		});
 	}
 
 	if( $('#panel-scrolling-demo').length > 0) {
 		$('#panel-scrolling-demo .panel-body').slimScroll({
 			height: '175px',
-			wheelStep: 2,
+            wheelStep: 10,
+            touchScrollStep: 75
 		});
 	}
 
