@@ -32,7 +32,7 @@
 <body>
     <div id="loader"></div>
     <!-- WRAPPER -->
-    <div id="wrapper"  style="display:none">
+    <div id="wrapper" style="display:none">
         <!-- NAVBAR -->
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="brand">
@@ -42,18 +42,22 @@
                 <!--<div class="navbar-btn">
                     <button type="button" class="btn-toggle-fullwidth"><i class="lnr lnr-arrow-left-circle"></i></button>
                 </div>-->
-                <form class="navbar-form navbar-left">
-                    <div class="input-group">
-                        <input id="RegionsInput" type="text" value="" class="form-control" placeholder="Filter by Regions">
-                    </div>
-
-                    <div class="input-group">
-                        <input type="text" value="" class="form-control" placeholder="Search on Place...">
-                        <span class="input-group-btn"><button type="button" class="btn btn-primary">Search</button></span>
-                    </div>
-                </form>
                 <!--<div class="navbar-btn navbar-btn-right">
                 </div>-->
+                <!--<form class="navbar-form navbar-left">
+
+                <div class="input-group">
+                    <input type="text" value="" class="form-control" placeholder="Search on Place...">
+                    <span class="input-group-btn"><button type="button" class="btn btn-primary">Search</button></span>
+                </div>
+
+
+
+                <div class="input-group">
+                    <input id="RegionsInput" type="text" value="" class="form-control" placeholder="Filter by Regions">
+                </div>
+
+                </form>-->
                 <div id="navbar-menu">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown" title="Notifications">
@@ -75,9 +79,9 @@
 
                         </li>
                         <li class="dropdown" title="language">
-                            <a href="#" class="dropdown-toggle icon-menu" data-toggle="dropdown" >
+                            <a href="#" class="dropdown-toggle icon-menu" data-toggle="dropdown">
                                 <div id="lang_selector" class="language-dropdown">
-                                    <label for="toggle" class="lang-flag lang-en" style="margin-bottom: 0;" title="Click to select the language">
+                                    <label for="toggle" class="lang-flag lang-en" style="margin-bottom: 0; padding:0; border: none;" title="Click to select the language">
                                         <span class="flag"></span>
                                     </label>
                                     <ul class="lang-list">
@@ -122,7 +126,7 @@
                 <button type="button" class="btn-toggle-fullwidth icon-arrows"><i class="lnr lnr-arrow-left-circle"></i></button>
             </div>
             <div class="sidebar-scroll">
-                
+
                 <div class="profile-header">
 
                     <ul class="nav navbar-nav profile-more ">
@@ -238,7 +242,7 @@
             </div>
             <!-- END Style 1 -->
             <!-- Animation -->
-            <div id="background-wrap" style="display:contents;">
+            <div id="background-wrap" style="display:block;">
 
                 <div class="x1">
                     <div class="cloud1"></div>
@@ -276,11 +280,106 @@
 
         </div>
         <!-- END MAIN -->
+        <!-- Right SIDEBAR -->
+        <div id="sidebar-nav-right" class="sidebar-right">
+            <div class="navbar-btn rightPanelBTN">
+                <button type="button" class="btn-toggle-search icon-search"><i class="lnr lnr-magnifier"></i></button>
+            </div>
+            <div class="sidebar-scroll">
+
+
+
+
+                <div class="col-md-12 margin-top-30">
+                    <div class="input-group">
+                        <input type="text" value="" class="form-control" placeholder="Search on Place...">
+                        <span class="input-group-btn"><button type="button" class="btn btn-primary">Search</button></span>
+                    </div>
+                </div>
+
+                <div class="col-md-12 margin-top-30">
+
+                    <div class="Transport">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Transportation</h3>
+                            <!--<p class="subtitle">For complete list</p>-->
+                        </div>
+                        <ul>
+                            <li><a href="#"><i class="fas fa-bus"></i></a></li>
+                            <li><a href="#"><i class="fas fa-subway"></i></a></li>
+                            <li><a href="#"><i class="fas fa-train"></i></a></li>
+                            <li><a href="#"><i class="fas fa-taxi"></i></a></li>
+                            <li><a href="#"><i class="fas fa-plane"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-12 margin-top-30">
+
+                    <div class="landmark">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Near Places</h3>
+                            <!--<p class="subtitle">For complete list</p>-->
+                        </div>
+                        <ul>
+                            <li class="Landmark-on"><a href="#"><i class="fas fa-bed"></i></a></li>
+                            <li><a href="#"><i class="fas fa-h-square"></i></a></li>
+                            <li><a href="#"><i class="fas fa-utensils"></i></a></li>
+                            <li><a href="#"><i class="fas fa-beer"></i></a></li>
+                            <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-12 margin-top-30">
+                    <div class="SelectRegions">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Select Regions</h3>
+                            <!--<p class="subtitle">For complete list</p>-->
+                        </div>
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="myRegions1" />
+                                <label for="myRegions1"><img src="assets/img/Regions/Riyadh.png" /></label>
+                            </li>
+                            <li>
+
+                                <input type="checkbox" id="myRegions2" />
+                                <label for="myRegions2"><img src="assets/img/Regions/jeddah.png" /></label>
+                            </li>
+                            <li>
+
+                                <input type="checkbox" id="myRegions3" />
+                                <label for="myRegions3"><img src="assets/img/Regions/Dammam.png" /></label>
+                            </li>
+
+                            <li>
+                                <input type="checkbox" id="myRegions4" />
+                                <label for="myRegions4"><img src="assets/img/Regions/Madinah.png" /></label>
+                            </li>
+                            <li>
+
+                                <input type="checkbox" id="myRegions5" />
+                                <label for="myRegions5"><img src="assets/img/Regions/Makkah.png" /></label>
+                            </li>
+                            <li>
+
+                                <input type="checkbox" id="myRegions6" />
+                                <label for="myRegions6"><img src="assets/img/Regions/Tabouk.png" /></label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- END RIGHT SIDEBAR -->
         <div class="clearfix"></div>
         <footer>
-            <div class="container-fluid">
+            <p class="copyright">&copy; 2020 <a href="https://mt.gov.sa/en/Pages/default.aspx" target="_blank">Toursim Ministry</a>. All Rights Reserved.</p>
+            <!--<div class="container-fluid">
                 <p class="copyright">&copy; 2020 <a href="https://mt.gov.sa/en/Pages/default.aspx" target="_blank">Toursim Ministry</a>. All Rights Reserved.</p>
-            </div>
+            </div>-->
         </footer>
     </div>
     <!-- END WRAPPER -->
