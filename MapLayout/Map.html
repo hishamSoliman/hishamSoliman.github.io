@@ -2,20 +2,18 @@
 <html lang="en">
 
 <head>
-    <title>Toursim Ministry Map</title>
+    <title>Tourism Ministry Map</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link href="assets/css/Loader.css" rel="stylesheet" />
     <!-- VENDOR CSS -->
+
     <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/vendor/linearicons/style.css">
-    <link rel="stylesheet" href="assets/vendor/chartist/css/chartist-custom.css">
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="assets/css/main.css">
-    <!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
-    <link rel="stylesheet" href="assets/css/demo.css">
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
     <!-- ICONS -->
@@ -27,6 +25,11 @@
     <link href="assets/css/langBar.css" rel="stylesheet" />
     <link href="assets/css/cycle2.css" rel="stylesheet" />
     <!--<link href="assets/css/BGSug.css" rel="stylesheet" />-->
+    <link href="assets/css/popupCard.css" rel="stylesheet" />
+    <link href="assets/css/SearchBox.css" rel="stylesheet" />
+    <!--<link href="assets/css/owl.carousel.css" rel="stylesheet" />-->
+    <!--<link href="assets/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="assets/css/owl.theme.min.css" rel="stylesheet" />-->
 </head>
 
 <body>
@@ -222,6 +225,7 @@
         <!-- END LEFT SIDEBAR -->
         <!-- MAIN -->
         <div class="main">
+
             <div class="mapviewer">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15022151.174498191!2d50.92988922895547!3d23.187808392845923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15e7b33fe7952a41%3A0x5960504bc21ab69b!2z2KfZhNiz2LnZiNiv2YrYqQ!5e0!3m2!1sar!2ssa!4v1590441008306!5m2!1sar!2ssa" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 <!--<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d9097915.120801417!2d49.49935267053049!3d24.132846012384324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sar!2ssa!4v1589311915335!5m2!1sar!2ssa" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>-->
@@ -230,6 +234,43 @@
                     <script>
                         !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
                     </script>
+                </div>
+                <div class="pinPlace">
+                    <div class="pCard_card">
+                        <div class="pCard_up">
+                            <div class="pCard_text">
+                                <h2>Place Name</h2>
+                                <p>Riyadh Region</p>
+                            </div>
+                            <div class="pCard_add"><i class="fa fa-ellipsis-h"></i></div>
+                        </div>
+                        <div class="pCard_down">
+                            <div class="pCard_info">
+                                <ul>
+                                    <li><a href="#"><i class="popupFav fa fa-heart" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="popupSavePlace fa fa-bookmark-o" aria-hidden="true"></i></a></li>
+                                    <li>
+                                        <div>
+                                            <p>Search</p>
+                                            <p>1,976</p>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                            <span class="triangle down"></span>
+
+                        </div>
+                        <div class="pCard_back">
+                            <p>Riyadh is a sprawling city of 6.5 million, 
+                            the capital of Saudi Arabia, and a major financial and administrative 
+                            center of the nation. You'll find it a busy and very modern place, 
+                            with much to offer the curious traveler.</p>
+
+                            <a href="#" onclick="toggelSidePanel()">More info</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -280,7 +321,7 @@
 
         </div>
         <!-- END MAIN -->
-        <!-- Right SIDEBAR -->
+        <!-- RIGHT SIDEBAR -->
         <div id="sidebar-nav-right" class="sidebar-right">
             <div class="navbar-btn rightPanelBTN">
                 <button type="button" class="btn-toggle-search icon-search"><i class="lnr lnr-magnifier"></i></button>
@@ -291,9 +332,20 @@
 
 
                 <div class="col-md-12 margin-top-30">
-                    <div class="input-group">
+                    <!--<div class="input-group">
                         <input type="text" value="" class="form-control" placeholder="Search on Place...">
                         <span class="input-group-btn"><button type="button" class="btn btn-primary">Search</button></span>
+                    </div>-->
+
+                    <div id="custom-search-input">
+                        <div class="input-group col-md-12">
+                            <input type="text" class="form-control input-lg" placeholder="Search" />
+                            <span class="input-group-btn">
+                                <button class="btn btn-info btn-lg" type="button">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </span>
+                        </div>
                     </div>
                 </div>
 
@@ -374,6 +426,22 @@
             </div>
         </div>
         <!-- END RIGHT SIDEBAR -->
+        <!-- RIGHT Slide Panel -->
+        <div id="Slide-panel-right" class="panel-right ">
+            <!--<div class="sidebar-scroll">
+
+    </div>-->
+            <div class="ImagesG-close">
+                <i class="fa fa-close"></i>
+            </div>
+
+
+
+            <iframe id="ifrmMoreInfo" src="Image.html" style="width:100%; height:100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+
+        </div>
+        <!-- END RIGHT Slide Panel -->
         <div class="clearfix"></div>
         <footer>
             <p class="copyright">&copy; 2020 <a href="https://mt.gov.sa/en/Pages/default.aspx" target="_blank">Toursim Ministry</a>. All Rights Reserved.</p>
@@ -396,6 +464,7 @@
     <script src="assets/scripts/LangBar.js"></script>
     <script src="assets/scripts/jquery.cycle2.js"></script>
     <script src="assets/scripts/jquery.cycle2.carousel.js"></script>
+    <!--<script src="assets/scripts/owl.carousel.min.js"></script>-->
     <script src="assets/scripts/commonScripts.js"></script>
 
 </body>
