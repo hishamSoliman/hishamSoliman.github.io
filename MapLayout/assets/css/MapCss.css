@@ -24,6 +24,10 @@ body {
         opacity: 1;
     }
 
+.Radius-r-t-0 {
+    border-top-right-radius: 0 !important;
+}
+
 .Map-Fit {
     width: calc(100% - 365px) !important;
     left: 15px !important;
@@ -331,6 +335,13 @@ label:focus + input::placeholder {
     .rightPanelBTN {
         top: 0 !important;
     }
+
+    .panel-right {
+        width: 100% !important;
+        height: calc(100% - 100px) !important;
+        margin-top: 60px !important;
+        z-index: 9 !important;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and down) */
@@ -400,6 +411,38 @@ label:focus + input::placeholder {
     box-shadow: -2px 0px 5px -2px rgba(115,115,115,0.71);
 }
 /*End Right Sidebar*/
+
+
+/*Right Slide Panel*/
+.panel-right {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    width: 700px;
+    height: calc(100% - 122px);
+    float: right;
+    background-color: #f5f5fa;
+    position: fixed;
+    right: -700px;
+    margin-top: 80px;
+    z-index: 1;
+}
+
+.panel-right-open {
+    right: 0 !important;
+    z-index: 1;
+    webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+
+/*End Right Slide Panel*/
+
 
 .landmark {
     text-align: center;
@@ -518,39 +561,40 @@ input[type="checkbox"][id^="myRegions"] {
     display: none;
 }
 
- label {
+label {
     border: 1px solid #b1b1b1;
     padding: 10px;
     display: block;
     position: relative;
     /*margin: 10px;*/
     cursor: pointer;
+    background-color: #fff;
 }
 
-label:before {
-    background-color: white;
-    color: white;
-    content: " ";
-    display: block;
-    border-radius: 50%;
-    border: 1px solid #3fab1b;
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    width: 25px;
-    height: 25px;
-    text-align: center;
-    line-height: 28px;
-    transition-duration: 0.4s;
-    transform: scale(0);
-}
+    label:before {
+        background-color: white;
+        color: white;
+        content: " ";
+        display: block;
+        border-radius: 50%;
+        border: 1px solid #3fab1b;
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        line-height: 28px;
+        transition-duration: 0.4s;
+        transform: scale(0);
+    }
 
-label img {
-    height: 60px;
-    width: 75px;
-    transition-duration: 0.2s;
-    transform-origin: 50% 50%;
-}
+    label img {
+        height: 60px;
+        width: 75px;
+        transition-duration: 0.2s;
+        transform-origin: 50% 50%;
+    }
 
 :checked + label {
     border-color: #3fab1b;
@@ -567,3 +611,49 @@ label img {
         /* box-shadow: 0 0 5px #333; */
         z-index: -1;
     }
+
+/*.p1-gradient-bg, .primary-btn:after, .overlay-bg, .owl-dot.active, .service-area .single-service .overlay-content {
+    background-image: -moz-linear-gradient(0deg, #3224b0 0%, #be5ede 100%);
+    background-image: -webkit-linear-gradient(0deg, #3224b0 0%, #be5ede 100%);
+    background-image: -ms-linear-gradient(0deg, #3224b0 0%, #be5ede 100%);
+}
+
+.owl-dots {
+    text-align: center;
+    bottom: 5px;
+    margin-top: 20px;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.owl-dot {
+    border-radius: 50px;
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+    background: rgba(127, 127, 127, 0.5);
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+    .owl-dot.active {
+        -webkit-transition: all 0.3s ease 0s;
+        -moz-transition: all 0.3s ease 0s;
+        -o-transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s;
+        padding: 0px 25px 0px 0px;
+    }*/
+
+.ImagesG-close {
+    font-size: 30px;
+    text-shadow: #00000047 0px 0px 10px;
+    cursor: pointer;
+    position: absolute;
+    right: 40px;
+    top: 30px;
+    color: #fff;
+}
+
