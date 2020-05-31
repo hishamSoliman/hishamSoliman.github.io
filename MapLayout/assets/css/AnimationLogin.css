@@ -16,16 +16,16 @@ body {
     background-image: url(../img/Riyadh-banner.png);
     background-repeat: no-repeat;
     background-repeat: repeat-x;
-    background-size: 533px;
+    background-size: 883px;
     background-position-y: bottom;
-    overflow: hidden;
+    overflow:hidden;
 }
 
 /* KEYFRAMES */
 
 @-webkit-keyframes animateCloud {
     0% {
-        margin-left: 30%;
+        margin-left: 0%;
     }
 
     100% {
@@ -35,7 +35,7 @@ body {
 
 @-moz-keyframes animateCloud {
     0% {
-        margin-left: 30%;
+        margin-left: 0%;
     }
 
     100% {
@@ -45,7 +45,7 @@ body {
 
 @keyframes animateCloud {
     0% {
-        margin-left: 30%;
+        margin-left: 0%;
     }
 
     100% {
@@ -56,38 +56,38 @@ body {
 
 @-webkit-keyframes animateCloud50 {
     0% {
-        margin-left: 50%;
+        margin-left: 0%;
     }
 
     100% {
-        margin-left: 100%;
+        margin-left: 120%;
     }
 }
 
 @-moz-keyframes animateCloud50 {
     0% {
-        margin-left: 50%;
+        margin-left: 0%;
     }
 
     100% {
-        margin-left: 100%;
+        margin-left: 120%;
     }
 }
 
 @keyframes animateCloud50 {
     0% {
-        margin-left: 50%;
+        margin-left: 0%;
     }
 
     100% {
-        margin-left: 100%;
+        margin-left: 120%;
     }
 }
 
 
 @-webkit-keyframes animateShip {
     0% {
-        margin-left: 65%;
+        margin-left: 0%;
     }
 
     100% {
@@ -97,7 +97,7 @@ body {
 
 @-moz-keyframes animateShip {
     0% {
-        margin-left: 65%;
+        margin-left: 0%;
     }
 
     100% {
@@ -107,7 +107,7 @@ body {
 
 @keyframes animateShip {
     0% {
-        margin-left: 65%;
+        margin-left: 0%;
     }
 
     100% {
@@ -123,7 +123,7 @@ body {
     }
 
     100% {
-        margin-left: 50%;
+        margin-left: 0%;
     }
 }
 
@@ -133,7 +133,7 @@ body {
     }
 
     100% {
-        margin-left: 50%;
+        margin-left: 0%;
     }
 }
 
@@ -143,7 +143,7 @@ body {
     }
 
     100% {
-        margin-left: 50%;
+        margin-left: 0%;
     }
 }
 /* ANIMATIONS */
@@ -185,15 +185,15 @@ body {
 }
 
 .xPlane {
-    -webkit-animation: animateCloud50 10s linear infinite;
-    -moz-animation: animateCloud50 10s linear infinite;
-    animation: animateCloud50 10s linear infinite;
+    -webkit-animation: animateCloud50 20s linear infinite;
+    -moz-animation: animateCloud50 20s linear infinite;
+    animation: animateCloud50 20s linear infinite;
 }
 
 .xShip1 {
-    -webkit-animation: animateShip 35s linear infinite;
-    -moz-animation: animateShip 35s linear infinite;
-    animation: animateShip 35s linear infinite;
+    -webkit-animation: animateShip 55s linear infinite;
+    -moz-animation: animateShip 55s linear infinite;
+    animation: animateShip 55s linear infinite;
     position: absolute;
     margin-top: 550px;
     position: fixed;
@@ -205,7 +205,7 @@ body {
     -moz-animation: animateShip2 35s linear infinite;
     animation: animateShip2 35s linear infinite;
     position: fixed;
-    bottom: 205px;
+    bottom: 280px;
 }
 
 .animationSea {
@@ -231,22 +231,25 @@ body {
 .cloud2 {
     background-image: url('../Animation/cloud_2_header.svg');
     height: 35px;
-    position: relative;
+    position: absolute;
     width: 170px;
+    top: 200px;
 }
 
 .cloud3 {
     background-image: url('../Animation/cloud_3_header.svg');
     height: 35px;
-    position: relative;
+    position: absolute;
     width: 170px;
+    top: 300px;
 }
 
 .cloud4 {
     background-image: url('../Animation/cloud_4_header.svg');
     height: 35px;
-    position: relative;
+    position: absolute;
     width: 150px;
+    top: 400px;
 }
 
 .Plane1 {
@@ -299,7 +302,7 @@ body {
     background-size: 70%;
     background-repeat: no-repeat;
     position: fixed;
-    right: 5px;
+    right: 78px;
     bottom: 507px;
 }
 
@@ -311,10 +314,10 @@ body {
     transform: translatey(0px);
     animation: float 6s ease-in-out infinite;
     background-image: url(../Animation/hotair_ballon2.png);
-    background-size: 28%;
+    background-size: 45%;
     background-repeat: no-repeat;
     position: fixed;
-    right: 168px;
+    left: 122px;
     bottom: 339px;
 }
 

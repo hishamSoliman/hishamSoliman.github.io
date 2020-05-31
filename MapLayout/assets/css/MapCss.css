@@ -239,7 +239,9 @@ label:focus + input::placeholder {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 768px) {
-
+    .themes{
+        display:none !important;
+    }
     .navbar-default .brand {
         display: block;
         width: 150px;
@@ -330,6 +332,7 @@ label:focus + input::placeholder {
         width: calc(100% - 40px) !important;
         right: calc(-100% + 40px) !important;
         margin-top: 60px !important;
+        height: calc(100% - 103px) !important;
     }
 
     .rightPanelBTN {
@@ -380,7 +383,7 @@ label:focus + input::placeholder {
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     width: 350px;
-    height: 100%;
+    height: calc(100% - 123px);
     float: right;
     background-color: #f5f5fa;
     position: fixed;
@@ -404,7 +407,7 @@ label:focus + input::placeholder {
     z-index: 1;
     left: -40px;
     background: #f5f5fa;
-    top: calc(50% - 145px);
+    top: calc(50% - 83px);
     border-radius: 5px 0 0 5px;
     -webkit-box-shadow: -2px 0px 5px -2px rgba(115,115,115,0.71);
     -moz-box-shadow: -2px 0px 5px -2px rgba(115,115,115,0.71);

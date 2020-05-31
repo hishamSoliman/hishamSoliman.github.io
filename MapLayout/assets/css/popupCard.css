@@ -17,7 +17,7 @@
     /* overflow: hidden; */
     bottom: 50px;
     left: -105px;
-    display:none;
+    display: none;
 }
 
 .pCard_card-show {
@@ -356,3 +356,14 @@ Down
                 height: 48px;
                 width: 48px;
             }
+
+.pCard-close {
+    position: absolute;
+    top: -20px;
+    left: 12px;
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.43);
+    padding: 0 10px;
+    border-radius: 5px 5px 0px 0px;
+    cursor:pointer;
+}

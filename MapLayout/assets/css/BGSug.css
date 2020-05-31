@@ -1,24 +1,34 @@
-﻿#BGSug {
+﻿#background-wrap{
+    display:none !important;
+}
+.copyright {
+    color: #fff;
+}
+
+.copyright a{
+    color: #00e0ff;
+}
+#BGSug {
     position: fixed;
     right: 0;
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
     background-size: 100% 100%;
+    background-image: url(../img/saudi3.png)
 }
 
 
 #wrapper .sidebar {
-    background-color: #f5f5fab3 !important;
-
+    background-color: transparent !important;
 }
 
 footer {
     width: calc(100% - 350px) !important;
-    background-color: #f5f5fab3 !important;
+    background-color: transparent !important;
 }
 
-.mapviewer iframe {
+/*.mapviewer iframe {
     border-radius: 0 !important;
 }
 
@@ -28,4 +38,4 @@ footer {
 
 .forcast-weatherwidget {
     width: calc(100% - 800px) !important;
-}
+}*/
