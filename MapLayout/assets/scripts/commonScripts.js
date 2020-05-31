@@ -111,7 +111,7 @@ $(document).ready(function () {
 
     if ($('.sidebar-scroll').length > 0) {
         $('.sidebar-scroll').slimScroll({
-            height: '95%',
+            height: '100%',
             wheelStep: 10,
             touchScrollStep: 75
         });
@@ -342,12 +342,16 @@ $(function () {
     $(".popupFav").click(function () {
         $(this).toggleClass("fa-heart-o fa-heart");
     });
-
+    $(".pCard-close").click(function (event) {
+        event.stopPropagation();
+        $('.pCard_card').hide();
+    });
+    
     $(".popupSavePlace").click(function () {
         $(this).toggleClass("fa-bookmark-o fa-bookmark");
     });
     
-    $(".pinPlace").click(function (event) {
+    $(".pinPlace").click(function () {
         $('.pCard_card').show();
     });
 
@@ -355,5 +359,10 @@ $(function () {
         toggelSidePanel();
     });
     
-    
+    $(".fa-paint-brush").click(function (e) {
+        //e.preventDefault();
+        //$('div.background-wrap:visible').hide();
+        //$('div.background-wrap:hidden').show();
+        $('head').append('<link href="assets/css/BGSug.css" rel="stylesheet" />');
+    });
 });
