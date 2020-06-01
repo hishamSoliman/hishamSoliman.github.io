@@ -4,6 +4,9 @@ body {
     background: linear-gradient(270deg, rgb(214, 241, 255) 0%, rgb(235, 244, 250) 47%, rgba(243,245,248,1) 85%) !important;
 }
 
+#background-wrap2{
+    display:none !important;
+}
 .mapviewer {
     position: fixed;
     width: calc(100% - 700px);
