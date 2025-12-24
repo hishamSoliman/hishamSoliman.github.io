@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قائمة الأسعار | Mocalicious</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700;800&family=Tajawal:wght@500;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2D1B12;
+            --secondary: #6B4423;
+            --gold: #D4A574;
+            --border: #E8DDD3;
+        }
+
+        body {
+            font-family: 'Almarai', 'Tajawal', sans-serif;
+            background: white;
+            color: var(--primary);
+            direction: rtl;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                padding: 0;
+            }
+            
+            .no-print {
+                display: none !important;
+            }
+            
+            .page-break {
+                page-break-after: always;
+            }
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 30px 20px;
+            border-bottom: 3px solid var(--gold);
+            margin-bottom: 40px;
+        }
+
+        .logo-text {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        .header-subtitle {
+            font-size: 1.3rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            font-size: 1.1rem;
+            color: var(--secondary);
+            margin-top: 15px;
+            direction: ltr;
+        }
+
+        /* Print Button */
+        .print-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 15px 30px;
+            background: var(--gold);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(212, 165, 116, 0.4);
+            z-index: 1000;
+        }
+
+        .print-button:hover {
+            background: #C0984A;
+            transform: translateY(-2px);
+        }
+
+        /* Menu Container */
+        .menu-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Category Section */
+        .category {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary);
+            padding: 15px 20px;
+            background: linear-gradient(135deg, #F5F1ED, #FAF7F4);
+            border-right: 5px solid var(--gold);
+            margin-bottom: 25px;
+        }
+
+        /* Menu Items Table */
+        .menu-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .menu-table tr {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .menu-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .menu-table td {
+            padding: 15px 10px;
+            font-size: 1.1rem;
+        }
+
+        .item-name {
+            font-weight: 700;
+            color: var(--primary);
+            width: 60%;
+        }
+
+        .item-weight {
+            color: var(--secondary);
+            font-size: 0.95rem;
+            width: 20%;
+            text-align: center;
+        }
+
+        .item-price {
+            font-weight: 800;
+            color: var(--gold);
+            font-size: 1.3rem;
+            text-align: left;
+            width: 20%;
+        }
+
+        .price-sar {
+            font-size: 0.9rem;
+            color: var(--secondary);
+            font-weight: 500;
+        }
+
+        /* Dotted Line */
+        .item-dots {
+            border-bottom: 2px dotted var(--border);
+            margin: 0 10px;
+            flex: 1;
+        }
+
+        .item-row {
+            display: flex;
+            align-items: baseline;
+            padding: 12px 10px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .item-row:last-child {
+            border-bottom: none;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid var(--border);
+            color: var(--secondary);
+        }
+
+        .footer-text {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        /* Notes Section */
+        .notes {
+            margin-top: 40px;
+            padding: 20px;
+            background: #FFF9F0;
+            border-right: 4px solid var(--gold);
+            border-radius: 8px;
+        }
+
+        .notes-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .notes-text {
+            color: var(--secondary);
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="menu-container">
+        <!-- Header -->
+        <div class="header">
+            <h1 class="logo-text">Mocalicious</h1>
+            <p class="header-subtitle">قائمة الأسعار</p>
+            <!-- <p class="contact-info">📞 00966581677779</p> -->
+        </div>
+
+        <!-- الموكا -->
+        <div class="category">
+            <h2 class="category-title">الموكا</h2>
+            <table class="menu-table">
+                <tr>
+                    <td class="item-name">موكا أورجينال</td>
+                    <td class="item-weight">250 جرام</td>
+                    <td class="item-price">35 <span class="price-sar">ريال</span></td>
+                </tr>
+                <tr>
+                    <td class="item-name">موكا ستيفيا</td>
+                    <td class="item-weight">250 جرام</td>
+                    <td class="item-price">50 <span class="price-sar">ريال</span></td>
+                </tr>
+                <tr>
+                    <td class="item-name">موكا بريميوم هاي إسبريسو</td>
+                    <td class="item-weight">250 جرام</td>
+                    <td class="item-price">40 <span class="price-sar">ريال</span></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- الهوت شوكليت -->
+        <div class="category">
+            <h2 class="category-title">الهوت شوكليت</h2>
+            <table class="menu-table">
+                <tr>
+                    <td class="item-name">هوت شوكليت أورجينال</td>
+                    <td class="item-weight">250 جرام</td>
+                    <td class="item-price">30 <span class="price-sar">ريال</span></td>
+                </tr>
+                <tr>
+                    <td class="item-name">هوت شوكليت بلجيكي</td>
+                    <td class="item-weight">250 جرام</td>
+                    <td class="item-price">35 <span class="price-sar">ريال</span></td>
+                </tr>
+                <tr>
+                    <td class="item-name">هوت شوكليت ستيفيا</td>
+                    <td class="item-weight">250 جرام</td>
+                    <td class="item-price">40 <span class="price-sar">ريال</span></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- السحلب -->
+        <div class="category">
+            <h2 class="category-title">السحلب</h2>
+            <table class="menu-table">
+                <tr>
+                    <td class="item-name">سحلب أورجينال كريمي</td>
+                    <td class="item-weight">250 جرام</td>
+                    <td class="item-price">20 <span class="price-sar">ريال</span></td>
+                </tr>
+                <tr>
+                    <td class="item-name">سحلب ستيفيا كريمي</td>
+                    <td class="item-weight">250 جرام</td>
+                    <td class="item-price">30 <span class="price-sar">ريال</span></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- الكب كيك -->
+        <div class="category">
+            <h2 class="category-title">الكب كيك</h2>
+            <table class="menu-table">
+                <tr>
+                    <td class="item-name">كب كيك ديكوريشن حشو موكا</td>
+                    <td class="item-weight">3 قطع</td>
+                    <td class="item-price">20 <span class="price-sar">ريال</span></td>
+                </tr>
+                <tr>
+                    <td class="item-name">كب كيك ديكوريشن حشو فيريرو</td>
+                    <td class="item-weight">3 قطع</td>
+                    <td class="item-price">20 <span class="price-sar">ريال</span></td>
+                </tr>
+                <tr>
+                    <td class="item-name">كب كيك ديكوريشن حشو نوتيلا</td>
+                    <td class="item-weight">3 قطع</td>
+                    <td class="item-price">20 <span class="price-sar">ريال</span></td>
+                </tr>
+                <tr>
+                    <td class="item-name">كب كيك ديكوريشن حشو بستاشيو</td>
+                    <td class="item-weight">3 قطع</td>
+                    <td class="item-price">20 <span class="price-sar">ريال</span></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- الكيك بوبس -->
+        <div class="category">
+            <h2 class="category-title">الكيك بوبس</h2>
+            <table class="menu-table">
+                <tr>
+                    <td class="item-name">كيك بوبس هاي بروتين تمر ودايجستيف</td>
+                    <td class="item-weight">5 قطع</td>
+                    <td class="item-price">35 <span class="price-sar">ريال</span></td>
+                </tr>
+                <tr>
+                    <td class="item-name">كيك بوبس شوكولاتة دارك ودايجستيف</td>
+                    <td class="item-weight">5 قطع</td>
+                    <td class="item-price">35 <span class="price-sar">ريال</span></td>
+                </tr>
+                <tr>
+                    <td class="item-name">كيك بوبس أوريو وشوكولاتة بلجيكي</td>
+                    <td class="item-weight">5 قطع</td>
+                    <td class="item-price">35 <span class="price-sar">ريال</span></td>
+                </tr>
+                <tr>
+                    <td class="item-name">كيك بوبس فيريرو روشيه وشوكولاتة بلجيكي</td>
+                    <td class="item-weight">5 قطع</td>
+                    <td class="item-price">35 <span class="price-sar">ريال</span></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- بار الشوكولاتة -->
+        <div class="category">
+            <h2 class="category-title">بار الشوكولاتة</h2>
+            <table class="menu-table">
+                <tr>
+                    <td class="item-name">بار شوكولاتة بلجيكي موكا وإسبريسو</td>
+                    <td class="item-weight">قطعة واحدة</td>
+                    <td class="item-price">35 <span class="price-sar">ريال</span></td>
+                </tr>
+                <tr>
+                    <td class="item-name">بار شوكولاتة بلجيكي موكا</td>
+                    <td class="item-weight">قطعة واحدة</td>
+                    <td class="item-price">35 <span class="price-sar">ريال</span></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Notes -->
+        <div class="notes no-print">
+            <h3 class="notes-title">ملاحظات:</h3>
+            <p class="notes-text">
+                • جميع الأسعار شاملة ضريبة القيمة المضافة<br>
+                • المنتجات متوفرة حسب التوفر<br>
+                • للطلبات الخاصة والمناسبات، يرجى التواصل معنا مسبقاً<br>
+                • نستخدم مكونات طبيعية وعالية الجودة
+            </p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p class="footer-text">Mocalicious - تجربة فاخرة للموكا والشوكولاتة</p>
+            <!-- <p class="footer-text" style="direction: ltr;">📞 00966581677779</p>
+            <p class="footer-text">💚 WhatsApp • 📘 Facebook • 🎵 TikTok</p> -->
+        </div>
+    </div>
+</body>
+</html>
